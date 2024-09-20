@@ -1,0 +1,44 @@
+$color-1: orange;
+$color-2: gray;
+$color-3: blue;
+
+$font-lg: 40px;
+$font-md: 30px;
+$font-sm: 20px;
+
+.nav {
+  background-color: $color-1;
+
+  ul li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: $font-sm;
+    color: $color-2;
+
+    &:hover {
+      color: $color-3;
+    }
+  }
+}
+
+@mixin headings($fontSize: 50px) {
+  font-size: $fontSize;
+  color: $color-2;
+  text-align: center;
+}
+
+.banner h1 {
+  @include headings($font-lg);
+}
+
+.footer h3 {
+  @include headings($font-md);
+
+  &:hover {
+    background-color: $color-1;
+    color: $color-3;
+  }
+}
