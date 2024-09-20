@@ -30,6 +30,10 @@ $font-sm: 20px;
   text-align: center;
 }
 
+@mixin transition($param...){
+  transition: $param;
+}
+
 .banner h1 {
   @include headings($font-lg);
 }
@@ -38,6 +42,7 @@ $font-sm: 20px;
   @include headings($font-md);
 
   &:hover {
+    @include transition(color .5, background-color .3);
     background-color: $color-1;
     color: $color-3;
   }
