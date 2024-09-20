@@ -1,4 +1,4 @@
-  .nav {
+.nav {
   background-color: orange;
 }
 .nav ul li {
@@ -13,19 +13,46 @@
   color: blue;
 }
 
+.footer h3, .banner h1 {
+  background-color: gray;
+  text-align: center;
+}
+
 .banner h1 {
   font-size: 40px;
-  color: gray;
-  text-align: center;
 }
 
 .footer h3 {
   font-size: 30px;
-  color: gray;
-  text-align: center;
-  transition: color 0.5s, background-color 0.3s;
 }
 .footer h3:hover {
+  transition: color 0.5s, background-color 0.3s;
   background-color: orange;
   color: blue;
+}
+
+.banner p {
+  font-size: 30px;
+  background-color: orange;
+}
+.banner p:hover {
+  background-color: #ffc966;
+}
+
+.footer p {
+  font-size: 20px;
+  background-color: orange;
+}
+.footer p:hover {
+  background-color: #996300;
+}
+
+.banner {
+  padding: 10px 20px;
+  background-color: #004080;
+}
+
+.footer {
+  padding: 10px 20px;
+  background-color: #00731a;
 }/*# sourceMappingURL=main.css.map */

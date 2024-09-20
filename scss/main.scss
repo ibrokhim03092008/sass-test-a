@@ -24,26 +24,55 @@ $font-sm: 20px;
   }
 }
 
-@mixin headings($fontSize: 50px) {
-  font-size: $fontSize;
-  color: $color-2;
-  text-align: center;
-}
-
 @mixin transition($param...){
   transition: $param;
 }
 
+%heading {
+  background-color: $color-2;
+  text-align: center;
+}
 .banner h1 {
-  @include headings($font-lg);
+  @extend %heading;
+  font-size: $font-lg;
 }
 
 .footer h3 {
-  @include headings($font-md);
+  @extend %heading;  
+  font-size: $font-md;
 
   &:hover {
-    @include transition(color .5, background-color .3);
+    @include transition(color .5s, background-color .3s);
     background-color: $color-1;
     color: $color-3;
   }
+}
+
+@function fontSize($size: 10px){
+  @return 2 * $size;
+}
+.banner p{
+  font-size: fontSize(15px);
+  background-color: $color-1;
+  
+  &:hover {
+    background-color: lighten($color-1, 20%);
+  }
+}
+.footer p{
+  font-size: fontSize();
+  background-color: $color-1;
+  
+  &:hover {
+    background-color: darken($color-1, 20%);
+  }
+}
+
+.banner{
+  padding: 10px 20px;
+  background-color: mix(green,blue);
+}
+.footer{
+  padding: 10px 20px;
+  background-color: mix(green, blue,90%);
 }
